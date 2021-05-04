@@ -1,0 +1,35 @@
+extends layout
+
+block content
+  .container-fluid
+    .row
+      .col-12.d-flex.align-items-center.flex-row
+        img.m-3.align-self-start(src='/images/qcfirst.png' width='110' alt='qcfirst')
+        .flex-grow-1.text-center.pr-5
+          h3.mb-4.pr-5 Course List
+  .container
+    .row.justify-content-center.my-5
+      .col-md-8
+        table.table
+          thead
+            tr
+              th Course/NameId
+              th Capacity
+              th Enrollment Deadline
+          tbody
+            tr
+              td CSCI111
+              td 35
+              td 04/01/2021
+            tr
+              td CSCI211
+              td 30
+              td 04/01/2021
+            tr
+              td CSCI313
+              td 40
+              td 04/01/2021
+            tr
+              td CSCI355
+              td 45
+              td 04/01/2021

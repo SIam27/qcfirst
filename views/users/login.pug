@@ -1,0 +1,29 @@
+extends ./../layout.pug
+block content
+    .container-fluid
+        .row
+        .col-12.d-flex.align-items-center.flex-column.justify-content-center
+            img.my-3(src='/images/qcfirst.png' width='150' alt='qcfirst')
+    .container
+        .row.justify-content-center
+            .col-md-6
+                h2.mb-4.text-center QCFirst 
+                    span=title
+                .card.bg-light.mb-4
+                    .card-body.py-4
+                        form(method="POST")
+                            .form-group
+                                label(for='uname') Email:
+                                input#uname.form-control(type='email' name='email')
+                            .form-group
+                                label Password:
+                                input#password.form-control(type='password' name='password')
+                            .form-group.mt-4
+                                button.btn.btn-outline-primary.btn-rounded Login
+                    .card-footer.d-flex
+                        a.card-link(href="/users/register")
+                            small.text-muted New user
+                        a.card-link(href='#')
+                            small.text-muted Forgot Password
+                        a.card-link(href='#')
+                            small.text-muted Forgot Username

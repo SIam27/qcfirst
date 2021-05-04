@@ -1,0 +1,21 @@
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.btn-rounded {
+  border-radius: 50px;
+  padding: 5px 40px;
+}
+
+.h-100vh {
+  height: 100vh;
+}
+
+button.close {
+  font-size: 14px;
+  line-height: 1rem;
+}

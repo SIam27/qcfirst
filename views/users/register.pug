@@ -1,0 +1,37 @@
+extends ./../layout.pug
+block content
+    .container-fluid
+        .row
+            .col-12.d-flex.align-items-center.flex-column.justify-content-center
+                img.my-3(src='/images/qcfirst.png' width='150' alt='qcfirst')
+    .container
+        .row.justify-content-center
+            .col-md-6
+                h2.mb-4.text-center= title
+                .card.bg-light.mb-4
+                    .card-body.py-4
+                        form(method="POST")
+                            .d-flex.justify-content-center
+                                .form-check.form-check-inline
+                                    input#student.form-check-input(type='radio' name='role' checked='' value="student")
+                                    label.form-check-label(for='student') Student
+                                .form-check.form-check-inline
+                                    input#instructor.form-check-input(type='radio' name='role' value="instructor")
+                                    label.form-check-label(for='instructor') Instructor
+                            .form-group.mt-4
+                                label(for='fname') First name:
+                                input#fname.form-control(type='text' name='first_name' value=first_name)
+                            .form-group
+                                label(for='lname') Last name:
+                                input#lname.form-control(type='text' name='last_name' value=last_name)
+                            .form-group
+                                label(for='email') Email:
+                                input#email.form-control(type='text' name='email' value=email)
+                            .form-group
+                                label(for='password') Password:
+                                input#password.form-control(type='password' name='password')
+                            .form-group
+                                label(for='cpassword') Confirm Password:
+                                input#cpassword.form-control(type='password' name='cpassword')
+                            .form-group.mt-4
+                                button.btn.btn-outline-primary.btn-rounded(type="submit") Sign up

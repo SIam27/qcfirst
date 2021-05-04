@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  .container-fluid
+    .row
+      .col-12.d-flex.align-items-center.flex-column.justify-content-center
+          img.my-3(src='/images/qcfirst.png' width='150' alt='qcfirst')
+  .container
+    .row.justify-content-center.my-5
+      .col-md-4.mt-5
+        a.btn.btn-success.btn-block.font-weight-bold.btn-rounded(href='/course-list') Course List
+        a.btn.btn-success.btn-block.font-weight-bold.btn-rounded(href='/users/register') SignUp
+        a.btn.btn-success.btn-block.font-weight-bold.btn-rounded(href='/users/login') Login

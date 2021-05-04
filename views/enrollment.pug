@@ -1,0 +1,46 @@
+extends layout
+
+block content
+    .container-fluid
+        .row
+            .col-12.d-flex.align-items-center.flex-row
+                img.m-3.align-self-start(src='/images/qcfirst.png' width='110' alt='qcfirst')
+                .flex-grow-1.text-center.pr-5
+                    h3.mb-4.pr-5 Enrollment
+
+    .container
+        .row.justify-content-between.my-5
+            .col-md-4
+                form
+                    .form-group
+                        label Select Department
+                        select.form-control(name='sel')
+                            option
+                                | select...
+                            option(value='physics')
+                                | PHYS
+                            option(value='math')
+                                | MATH
+                            option(value='chemistry')
+                                | CHEM
+                    .form-group
+                        label(for='course_id') Course number
+                        input#course_id.form-control(type='text')
+                    .alert.alert-success
+                        strong Success!
+                        button.close(type='button' data-dismiss='alert' aria-label='Close')
+                            span(aria-hidden='true') ×
+                    .alert.alert-danger
+                        strong Failed!
+                        button.close(type='button' data-dismiss='alert' aria-label='Close')
+                            span(aria-hidden='true') ×
+                    .form-group
+                        button.btn.btn-outline-primary.btn-rounded Search
+                    .form-group
+                        a.btn.btn-info.text-light.btn-rounded.my-5(href="/users/logout") Logout    
+            .col-md-6
+                .card.bg-light.mb-4
+                    .card-body.py-4
+                        .card-title.font-weight-bold My classes
+                        p .....
+                        p ...
