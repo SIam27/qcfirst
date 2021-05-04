@@ -45,9 +45,9 @@ Nader Nehal
 
 ### Choice for front-end
 * Html and Css were initially used and later converted to PUG.
-###Choice for front-end
+### Choice for back-end
 * Nodejs,Express
-###Choice for Database Management System
+### Choice for Database Management System
 * MySql
 
 ### Link to visual designs: 
