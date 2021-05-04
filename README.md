@@ -41,6 +41,12 @@ Nader Nehal
 * Enrollment Page: https://siam27.github.io/QCFIRST/enrollment.html
 * Search Page : https://siam27.github.io/QCFIRST/search.html
 * Roster Page: https://siam27.github.io/QCFIRST/roster.html
+###Choice for front-end
+* Html and Css were initially used and later converted to PUG.
+###Choice for front-end
+* Nodejs,Express
+###Choice for Database Management System
+* MySql
 ### Link to visual designs: 
 https://github.com/SIam27/qcfirst/tree/main/QCFirst%20visual%20designs
 #### Visual design VS Final outcome
