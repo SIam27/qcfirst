@@ -42,3 +42,7 @@ Created Login,index,course-list and course-management page. Added html and css t
 https://github.com/SIam27/qcfirst/tree/main/QCFirst%20visual%20designs
 #### Visual design VS Final outcome
 Evey pages started from wireframing. From there, we created visual design for each page and then created the html files. The goal was to create simple html pages from the visual designs created earlier. As each page was getting its shape, some modifications needed to be done to the visual designs for functionality and requirements. We Were missing some pages from our visual design such as the search page and the roster page which we added later in order to fullfill te requirements. Overall we have all the pages ready, we just need to connect all of them using backend in the upcoming deliverable.
+
+#### Deliverabe 4 update
+* We implemented the backend using nodejs and my sql database.
+* We used pug framework and converted all our html files to pug file, because Pug is a template engine for Node.js. So it was easier for us to work with pug for developing backend.
