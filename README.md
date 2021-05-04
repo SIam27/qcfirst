@@ -10,10 +10,13 @@ Nader Nehal
 ## Contribution Made By Sanjid Alam
 
 Created Signup,Search,enrollement and roster page. Added html and css to these pages.
+Created Singup and login session using nodejs and my sql.
 
 ## Contribution Made By Nader Nehal
 
 Created Login,index,course-list and course-management page. Added html and css to these pages.
+Helped creating Singup and login session using nodejs and my sql.
+
 
 ### List of Features
 * Every pages are resposive and compatible for desktop,tablet and smartphones.
