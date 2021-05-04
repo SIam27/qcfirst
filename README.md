@@ -32,6 +32,7 @@ Nader Nehal
 * Course management lets to add or remove a course
 * Instructors has the access to roaster for each classes
 * Roster includes student name, ID and email and will be created dynamicly for each class
+
 ### Link of all the pages and features:
 * Home Page : https://siam27.github.io/QCFIRST/index.html
 * Course List Page : https://siam27.github.io/QCFIRST/CourseList.html
@@ -41,14 +42,17 @@ Nader Nehal
 * Enrollment Page: https://siam27.github.io/QCFIRST/enrollment.html
 * Search Page : https://siam27.github.io/QCFIRST/search.html
 * Roster Page: https://siam27.github.io/QCFIRST/roster.html
-###Choice for front-end
+
+### Choice for front-end
 * Html and Css were initially used and later converted to PUG.
 ###Choice for front-end
 * Nodejs,Express
 ###Choice for Database Management System
 * MySql
+
 ### Link to visual designs: 
 https://github.com/SIam27/qcfirst/tree/main/QCFirst%20visual%20designs
+
 #### Visual design VS Final outcome
 Evey pages started from wireframing. From there, we created visual design for each page and then created the html files. The goal was to create simple html pages from the visual designs created earlier. As each page was getting its shape, some modifications needed to be done to the visual designs for functionality and requirements. We Were missing some pages from our visual design such as the search page and the roster page which we added later in order to fullfill te requirements. Overall we have all the pages ready, we just need to connect all of them using backend in the upcoming deliverable.
 
