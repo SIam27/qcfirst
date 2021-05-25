@@ -59,3 +59,6 @@ Evey pages started from wireframing. From there, we created visual design for ea
 #### Deliverabe 4 update
 * We implemented the backend using nodejs and my sql database.
 * We used pug framework and converted all our html files to pug file, because Pug is a template engine for Node.js. So it was easier for us to work with pug for developing backend.
+#### Final Update
+* We implemented all the necessary features to complete the full website.
+* In order to login as an admin and access the backed login as: email: superadmin@mail.com Password:test123
