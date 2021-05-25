@@ -8,47 +8,42 @@ block content
                 .flex-grow-1.text-center.pr-5
                     h3.mb-4.pr-5 Course Management
 
-    .container
+    .container.flex-grow-1
         .row.justify-content-between.my-5
             .col-md-6
                 .card.bg-light
                     .card-body
                         .card-title.mb-4.font-weight-bold
                             | Add
-                        form
+                        form(method='POST')
                             .form-group
                                 label Course name:
-                                input#course-name.form-control(type='text' name='course')
+                                input#course-name.form-control(type='text' name='course_name' required)
                             .form-group
                                 label Department
-                                select#department.form-control(name='dep')
-                                    option(value='physics')
-                                    | PHYS
-                                    option(value='math')
-                                    | MATH
-                                    option(value='chemistry')
-                                    | CHEM
-                            .form-group
-                                label(for='course-num') Course number:
-                                input#course-num.form-control(type='text' name='course')
-                            .form-group
-                                label Capacity:
-                                input#cap.form-control(type='text' name='capacity')
+                                select#department.form-control(name='department' required)
+                                    option(value='PHYS') PHYS
+                                    option(value='MATH') MATH
+                                    option(value='CHEM') CHEM
                             .form-group
                                 label(for='semester') Semester
-                                select#semester.form-control(name='sem')
-                                    option(value='spring')
-                                    | Spring
-                                    option(value='fall')
-                                    | Fall
-                                    option(value='summer')
-                                    | Summer
+                                select#semester.form-control(name='semester' required)
+                                    option(value='spring') Spring
+                                    option(value='fall') Fall
+                                    option(value='summer') Summer
+                            .form-group
+                                label Capacity:
+                                input#cap.form-control(type='number' name='capacity' required)
+                            
                             .form-group
                                 label(for='date') Enrollment date:
-                                input#date.form-control(type='date' name='enrollment date')
+                                input#date.form-control(type='date' name='schedule' required)
                             .form-group
-                                label(for='des') Enrollment date:
-                                textarea#des.form-control Course description
+                                label(for='deadline') Deadline date:
+                                input#deadline.form-control(type='date' name='deadline' required)
+                            .form-group
+                                label(for='des') Description:
+                                textarea#des.form-control(name='description' required)
                             .form-group
                                 button.btn.btn-outline-success.btn-rounded(type='submit') Create
                                 
@@ -57,14 +52,15 @@ block content
                     .card-body
                         .card-title.mb-4.font-weight-bold
                             | Remove
-                        form
+                        form(method="POST" action="/remove-course")
                             .form-group
-                            label Course name:
-                            input#name-remove.form-control(type='text' name='course')
-                            .form-group
-                            label Department
-                            select#department-remove.form-control(name='dep-rem')
-                                option(value='physics')
-                                | PHYS
-                            .form-group
-            a.btn.btn-info.text-light.btn-rounded.my-5(href="/users/logout") Logout
+                                label Courses
+                                select#department-remove.form-control(name='course_id')
+                                    each course in courseData
+                                        option(value=course.id) 
+                                            = course.course_name
+                            .form-group 
+                                button.btn.btn-danger(type="submit") Remove
+            div.d-flex.justify-content-start
+                a.btn.btn-info.text-light.btn-rounded.my-5(href="/users/logout") Logout
+                a.btn.btn-info.text-light.btn-rounded.my-5.mx-2(href="/instructor-list") My List

@@ -8,39 +8,28 @@ block content
                 .flex-grow-1.text-center.pr-5
                     h3.mb-4.pr-5 Enrollment
 
-    .container
+    .container.flex-grow-1
         .row.justify-content-between.my-5
             .col-md-4
-                form
+                form(method="POST" action="/search")
                     .form-group
                         label Select Department
-                        select.form-control(name='sel')
-                            option
-                                | select...
-                            option(value='physics')
-                                | PHYS
-                            option(value='math')
-                                | MATH
-                            option(value='chemistry')
-                                | CHEM
+                        select.form-control(name='department' required)
+                            option select...
+                            option(value='CSCI') CSCI
+                            option(value='MATH') MATH
+                            option(value='CHEM') CHEM
                     .form-group
                         label(for='course_id') Course number
-                        input#course_id.form-control(type='text')
-                    .alert.alert-success
-                        strong Success!
-                        button.close(type='button' data-dismiss='alert' aria-label='Close')
-                            span(aria-hidden='true') ×
-                    .alert.alert-danger
-                        strong Failed!
-                        button.close(type='button' data-dismiss='alert' aria-label='Close')
-                            span(aria-hidden='true') ×
+                        input#course_id.form-control(type='text' name='course_name' required)
                     .form-group
-                        button.btn.btn-outline-primary.btn-rounded Search
+                        button.btn.btn-outline-primary.btn-rounded(type=submit) Search
                     .form-group
                         a.btn.btn-info.text-light.btn-rounded.my-5(href="/users/logout") Logout    
             .col-md-6
                 .card.bg-light.mb-4
                     .card-body.py-4
-                        .card-title.font-weight-bold My classes
-                        p .....
-                        p ...
+                        .card-title.font-weight-bold.mb-3 My classes
+                        each classData in classesData
+                            p
+                                = classData.course_name

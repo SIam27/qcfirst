@@ -1,0 +1,19 @@
+extends ./../layout.pug
+
+block content
+  .container-fluid
+    .row
+      .col-12.d-flex.align-items-center.flex-column.justify-content-center
+          img.my-3(src='/images/qcfirst.png' width='150' alt='qcfirst')
+  .container.flex-grow-1
+    .row.justify-content-center.my-2
+      .col-md-8.mt-2.justify-content-center.d-flex.flex-column.align-items-center
+        nav(aria-label='breadcrumb')
+          ol.breadcrumb
+            li.breadcrumb-item
+              a(href='/admin') Admin
+            li.breadcrumb-item.active(aria-current='page') Dashboard
+        h4.border-bottom.pb-4 Welcome to the Admin section
+        a.btn.btn-link.font-weight-bold.btn-rounded.mt-2(href='/admin/users-list') Users List
+        a.btn.btn-link.font-weight-bold.btn-rounded.mt-2(href='/admin/courses-list/0/0') Courses List
+        a.btn.btn-link.font-weight-bold.btn-rounded.mt-2(href='/users/logout') Logout

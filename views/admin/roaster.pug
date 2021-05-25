@@ -1,0 +1,39 @@
+extends ./../layout
+
+block content
+  .container-fluid
+    .row
+      .col-12.d-flex.align-items-center.flex-row
+        img.m-3.align-self-start(src='/images/qcfirst.png' width='110' alt='qcfirst')
+        .flex-grow-1.text-center.pr-5
+          h3.mb-4.pr-5 Student Roster
+  .container.flex-grow-1
+    .row.justify-content-center.my-5
+      .col-md-8
+        nav(aria-label='breadcrumb')
+            ol.breadcrumb
+                li.breadcrumb-item
+                    a(href='/admin') Admin
+                li.breadcrumb-item
+                    a(href='/admin/courses-list/0/0') Courses list
+                li.breadcrumb-item.active(aria-current='page') 
+                    =course_name
+                li.breadcrumb-item.active(aria-current='page') Roaster
+        table.table
+            thead
+                tr
+                    th Student Name
+                    th Student Email
+                    th Course Name
+                    th Date Added
+            tbody
+                each studentData in studentsData
+                    tr 
+                        td 
+                            =studentData.first_name
+                        td 
+                            =studentData.email
+                        td 
+                            =course_name
+                        td 
+                            =moment(studentData.date_created).format('YYYY-MM-DD')
